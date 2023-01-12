@@ -59,7 +59,7 @@
                                 <label class="label-form">
                                     <p>Name</p>
                                     <div class="modal-wrapper">
-                                        <input type="text" name="name" class="input-text-form" required/>
+                                        <input type="text" name="name" class="input-text-form" required />
                                         <svg class="icon-modal">
                                             <use href="./images/icons.svg#icon-name"></use>
                                         </svg>
@@ -68,7 +68,7 @@
                                 <label class="label-form">
                                     <p>Phone</p>
                                     <div class="modal-wrapper">
-                                        <input type="tel" name="phone" class="input-text-form" required/>
+                                        <input type="tel" name="phone" class="input-text-form" required />
                                         <svg class="icon-modal">
                                             <use href="./images/icons.svg#icon-phone"></use>
                                         </svg>
@@ -77,8 +77,8 @@
                                 <label class="label-form">
                                     <p>Email</p>
                                     <div class="modal-wrapper">
-                                        <input type="email" name="email-form" class="input-text-form" required/>
-                                        <svg class="icon-modal email">
+                                        <input type="email" name="email-form" class="input-text-form" required />
+                                        <svg class="icon-modal">
                                             <use href="./images/icons.svg#icon-email"></use>
                                         </svg>
                                     </div>
@@ -94,7 +94,8 @@
                                     <div class="checkbox-wrapper">
                                         <input type="checkbox" name="checkbox" class="checkbox" />
                                         <svg class="checkbox-svg">
-                                            <use href="./images/icons.svg#icon-checkbox" width="10px" height="8px"></use>
+                                            <use href="./images/icons.svg#icon-checkbox" width="10px" height="8px">
+                                            </use>
                                         </svg>
                                     </div>
                                     <p class="checkbox-text">
@@ -433,17 +434,17 @@
                 </ul>
             </div>
             <div class="subscribe-footer">
-                <label class="label-subscribe">
-                    <p class="p-footer-icons">Subscribe</p>
-                    <input name="email-footer" type="email" placeholder="E-mail" class="input-footer" required>
-                </label>
-                <div class="button-subscribe-wrapper">
-                    <button type="submit" class="subscribe-button">Subscribe</button>
-                    <svg class="svg-subscribe-button">
-                        <use href="./images/icons.svg#icon-send"></use>
-                    </svg>
-                </div>
+                <form>
+                    <label class="label-subscribe">
+                        <p class="p-footer-icons">Subscribe</p>
+                        <input name="email-footer" type="email" placeholder="E-mail" class="input-footer" required>
+                    </label>
+                        <button type="submit" class="subscribe-button">Subscribe
+                        <svg class="svg-subscribe-button">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg></button>
             </div>
+            </form>
         </div>
     </footer>
     <script src="./js/modal.js"></script>

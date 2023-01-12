@@ -472,16 +472,17 @@ footer {
     font-size: 16px;
     line-height: 1.5;
     font-style: "Roboto";
-    padding: 8px 24px 8px 0;
+    padding: 8px 0 8px 24px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    margin-top: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscribe-button:active{
     background-color: rgba(64, 75, 191, 1);
 }
-.button-subscribe-wrapper{
-    position: relative;
-    margin-top: 40px;
-    cursor: pointer;
-}
+
 .label-subscribe p{
     margin-bottom: 16px;
 }
@@ -501,11 +502,11 @@ footer {
 }
 .label-subscribe{
     margin-right: 24px;
-}
-.subscribe-footer{
     display: flex;
-    align-content: center;
+    flex-direction: column;
+    cursor: pointer;
 }
+
 .svg-subscribe-button{
     width: 24px;
     height: 24px;
@@ -513,6 +514,9 @@ footer {
     position: absolute;
     top: 8px;
     right: 24px;
+}
+.subscribe-footer form{
+    display: flex;
 }
 /* portfolio */
 .section-portfolio {
@@ -731,6 +735,7 @@ a:focus .absolute-portfolio-block {
     background-color: var(--iris);
     border: none;
 }
+
 .checkbox-svg{
     position: absolute;
     top: 0;
@@ -741,9 +746,6 @@ a:focus .absolute-portfolio-block {
     padding: 4px 3px;
     border-radius: 2px;
     border: 1.25px solid var(--navy-blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .textarea-modal{
     resize: none;
@@ -754,6 +756,7 @@ a:focus .absolute-portfolio-block {
     padding-left: 16px;
     padding-top: 8px;
     outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .textarea-modal:focus{
     border-color: var(--iris);
@@ -767,6 +770,7 @@ a:focus .absolute-portfolio-block {
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     padding-left: 34px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-text-form{
     outline: transparent;
@@ -776,6 +780,9 @@ a:focus .absolute-portfolio-block {
 }
 .input-text-form:focus+.icon-modal{
     fill: var(--iris);
+}
+.label-form{
+    cursor: pointer;
 }
 .label-form p{
     font-weight: 400;
@@ -815,6 +822,7 @@ height: 12px;
     left: 19px;
     top: 14px;
     fill: inherit;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .submit-button{
     width: 170px;
@@ -826,9 +834,14 @@ height: 12px;
     color: #fff;
     cursor: pointer;
 }
+.submit-button:hover,
+.submit-button:focus{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .label-checkbox{
     display: flex;
     margin-bottom: 24px;
+    cursor: pointer;
 }
 .checkbox{
     width: 16px;
@@ -836,7 +849,6 @@ height: 12px;
     border: 1.25px solid var(--navy-blue);
     border-radius: 2px;
     opacity: 0;
-}
-.checkbox:checked{
-    color: var(--iris);
+    position: relative;
+    margin-right: 8px;
 }
