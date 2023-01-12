@@ -718,14 +718,35 @@ a:focus .absolute-portfolio-block {
     align-items: center;
     justify-content: center;
 }
-
+.checkbox-wrapper{
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-color: var(--iris);
+    border-radius: 2px;
+}
+.checkbox:checked{
+    display: none;
+}
+.checkbox:checked+.checkbox-svg{
+    opacity: 1;
+}
+.checkbox-svg{
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: 10px;
+    height: 8px;
+    fill: saddlebrown;
+    opacity: 0;
+}
 .textarea-modal{
     resize: none;
     height: 120px;
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    margin-bottom: 16px;
     padding-left: 16px;
     padding-top: 8px;
     outline: transparent;
@@ -733,16 +754,15 @@ a:focus .absolute-portfolio-block {
 .textarea-modal:focus{
     border-color: var(--iris);
 }
-
-
+.textarea-wrapper{
+    margin-bottom: 16px;    
+}
 .input-text-form{
     width: 100%;
     height: 40px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
-    margin-bottom: 8px;
     padding-left: 34px;
-    ;
 }
 .input-text-form{
     outline: transparent;
@@ -784,6 +804,7 @@ height: 12px;
 }
 .modal-wrapper{
     position: relative;
+    margin-bottom: 8px;
 }
 .icon-modal{
     position: absolute;
@@ -799,16 +820,18 @@ height: 12px;
     border: none;
     border-radius: 4px;
     color: #fff;
-
+    cursor: pointer;
 }
 .label-checkbox{
     display: flex;
+    margin-bottom: 24px;
 }
 .checkbox{
     width: 16px;
     height: 16px;
     border: 1.25px solid var(--navy-blue);
     border-radius: 2px;
-    margin-right: 8px;
-    margin-bottom: 24px;
+}
+.checkbox:checked{
+    color: var(--iris);
 }
