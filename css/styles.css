@@ -474,6 +474,9 @@ footer {
     font-style: "Roboto";
     padding: 8px 24px 8px 0;
 }
+.subscribe-button:active{
+    background-color: rgba(64, 75, 191, 1);
+}
 .button-subscribe-wrapper{
     position: relative;
     margin-top: 40px;
@@ -720,26 +723,27 @@ a:focus .absolute-portfolio-block {
 }
 .checkbox-wrapper{
     position: relative;
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
     margin-right: 8px;
-    background-color: var(--iris);
-    border-radius: 2px;
-}
-.checkbox:checked{
-    display: none;
 }
 .checkbox:checked+.checkbox-svg{
-    opacity: 1;
+    background-color: var(--iris);
+    border: none;
 }
 .checkbox-svg{
     position: absolute;
-    top: 4px;
-    left: 3px;
-    width: 10px;
-    height: 8px;
-    fill: saddlebrown;
-    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+    padding: 4px 3px;
+    border-radius: 2px;
+    border: 1.25px solid var(--navy-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .textarea-modal{
     resize: none;
@@ -831,6 +835,7 @@ height: 12px;
     height: 16px;
     border: 1.25px solid var(--navy-blue);
     border-radius: 2px;
+    opacity: 0;
 }
 .checkbox:checked{
     color: var(--iris);
