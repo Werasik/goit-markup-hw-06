@@ -650,8 +650,12 @@ a:focus .absolute-portfolio-block {
     width: 408px;
     height: 579px;
     background-color: rgba(252, 252, 252, 1);
+    opacity: 1;
 }
-
+.is-hidden .modal{
+    opacity: 0;
+    top: 100%
+}
 .backdrop {
     position: fixed;
     top: 0;
@@ -662,10 +666,10 @@ a:focus .absolute-portfolio-block {
     transition: visibility 375ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop:not(.is-hidden) .modal{
-    animation : openAnimation 375ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 375ms cubic-bezier(0.4, 0, 0.2, 1), top 375ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 .backdrop.is-hidden .modal {
-    animation: closeAnimation 375ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 375ms cubic-bezier(0.4, 0, 0.2, 1), top 375ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .close-icon-modal {
@@ -807,23 +811,4 @@ height: 12px;
     border-radius: 2px;
     margin-right: 8px;
     margin-bottom: 24px;
-}
-/* animations */
-@keyframes openAnimation {
-	0%{
-        top: 100%;
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-@keyframes closeAnimation {
-    0%{
-        opacity: 1;
-    }
-    100%{
-        top: 100%;
-        opacity: 0;
-    }
 }
