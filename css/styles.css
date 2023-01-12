@@ -402,12 +402,15 @@ height: 16px;
 footer {
     background-color: var(--navy-blue);
     padding: 100px 0;
+    display: flex;
 }
 
 .container-footer {
     display: flex;
 }
-
+.footer-social-media{
+    margin-right: 80px;
+}
 .footer-box {
     width: 264px;
     margin-right: 120px;
@@ -456,7 +459,58 @@ footer {
 .icon-item-footer:not(:last-child) {
     margin-right: 16px;
 }
-
+.subscribe-button{
+    color: #fff;
+    background-color: var(--iris);
+    width: 168px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    font-size: 16px;
+    line-height: 1.5;
+    font-style: "Roboto";
+    padding: 8px 24px 8px 0;
+}
+.button-subscribe-wrapper{
+    position: relative;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.label-subscribe p{
+    margin-bottom: 16px;
+}
+.input-footer{
+    width: 264px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    outline: inherit;
+    padding: 8px 0 8px 16px;
+    transition: border-color 250ms linear;
+}
+.input-footer:focus {
+    border-color: var(--iris);
+}
+.label-subscribe{
+    margin-right: 24px;
+}
+.subscribe-footer{
+    display: flex;
+    align-content: center;
+}
+.svg-subscribe-button{
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    position: absolute;
+    top: 8px;
+    right: 24px;
+}
 /* portfolio */
 .section-portfolio {
     padding-top: 96px;
@@ -644,8 +698,17 @@ a:focus .absolute-portfolio-block {
 
 
 /* form */
+.form h3{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
 .container-modal{
-    padding:  72px 24px 24px 24px;
+    padding:  72px 24px 0 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -659,10 +722,15 @@ a:focus .absolute-portfolio-block {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     margin-bottom: 16px;
+    padding-left: 16px;
+    padding-top: 8px;
+    outline: transparent;
 }
-.textarea-modal::placeholder{
-    padding: 8px 16px;
+.textarea-modal:focus{
+    border-color: var(--iris);
 }
+
+
 .input-text-form{
     width: 100%;
     height: 40px;
@@ -672,29 +740,41 @@ a:focus .absolute-portfolio-block {
     padding-left: 34px;
     ;
 }
+.input-text-form{
+    outline: transparent;
+}
+.input-text-form:focus{
+    border-color: var(--iris);
+}
+.input-text-form:focus+.icon-modal{
+    fill: var(--iris);
+}
 .label-form p{
     font-weight: 400;
     font-size: 12px;
     line-height: 1.166;
     padding-bottom: 4px;
+    display: flex;
+    justify-content: flex-start;
+    color: var(--light-slate);
 }
 .checkbox-text{
     font-size: 12px;
     font-weight: 400px;
     line-height: 1.333;
 }
-.checkbox-text span{
+.checkbox-text a{
     color: var(--iris);
 }
-.label-form:nth-child(1) .icon-modal{
+.label-form:nth-child(2) .icon-modal{
     width: 12px;
     height: 12px;
 }
-.label-form:nth-child(2) .icon-modal{
+.label-form:nth-child(3) .icon-modal{
 width: 13px;
 height: 13px;
 }
-.label-form:nth-child(3) .icon-modal{
+.label-form:nth-child(4) .icon-modal{
 width: 15px;
 height: 12px;
 }
@@ -705,6 +785,7 @@ height: 12px;
     position: absolute;
     left: 19px;
     top: 14px;
+    fill: inherit;
 }
 .submit-button{
     width: 170px;
