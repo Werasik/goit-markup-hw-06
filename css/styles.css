@@ -404,7 +404,6 @@ footer {
     padding: 100px 0;
     display: flex;
 }
-
 .container-footer {
     display: flex;
 }
@@ -441,6 +440,7 @@ footer {
     font-weight: 600;
     line-height: 1.5;
     color: #ffffff;
+    margin-bottom: 16px;
 }
 
 .icon-footer {
@@ -471,12 +471,8 @@ footer {
     letter-spacing: 0.06em;
     font-size: 16px;
     line-height: 1.5;
-    font-style: "Roboto";
     padding: 8px 0 8px 24px;
-    position: relative;
-    cursor: pointer;
     display: flex;
-    margin-top: 40px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscribe-button:active{
@@ -511,9 +507,7 @@ footer {
     width: 24px;
     height: 24px;
     fill: #fff;
-    position: absolute;
-    top: 8px;
-    right: 24px;
+    margin-left: 16px;
 }
 .subscribe-footer form{
     display: flex;
@@ -677,7 +671,7 @@ a:focus .absolute-portfolio-block {
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
     opacity: 1;
-    transition: opacity 375ms cubic-bezier(0.4, 0, 0.2, 1), visibility 375ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 375ms cubic-bezier(0.4, 0, 0.2, 1), visibility 375ms cubic-bezier(0.4, 0, 0.2, 1), pointer-events 375ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden{
     opacity: 0;
@@ -729,6 +723,9 @@ a:focus .absolute-portfolio-block {
     margin-bottom: 16px;
     color: var(--navy-blue);
 }
+.textarea-label{
+    margin-bottom: 16px;
+}
 .textarea-modal{
     resize: none;
     height: 120px;
@@ -771,15 +768,18 @@ a:focus .absolute-portfolio-block {
 }
 .label-form{
     cursor: pointer;
-}
-.label-form p{
+    margin-bottom: 8px;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.166;
-    padding-bottom: 4px;
-    display: flex;
-    justify-content: flex-start;
     color: var(--light-slate);
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.input-wrapper{
+    position: relative;
+    margin-top: 4px;
 }
 .checkbox-text{
     font-size: 12px;
@@ -801,22 +801,18 @@ height: 13px;
 width: 15px;
 height: 12px;
 }
-.modal-wrapper{
-    position: relative;
-    margin-bottom: 8px;
-}
 .icon-modal{
     position: absolute;
-    left: 19px;
-    top: 14px;
     fill: inherit;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 14px;
+    left: 19px;   
 }
+
 .submit-button{
     width: 170px;
     padding: 16px 32px;
     background-color: var(--iris);
-    display: inline-block;
     border: none;
     border-radius: 4px;
     color: #fff;
@@ -842,8 +838,6 @@ height: 12px;
 
 .checkbox-svg{
     position: absolute;
-    top: 0;
-    left: 0px;
     width: 16px;
     height: 16px;
     fill: #fff;
