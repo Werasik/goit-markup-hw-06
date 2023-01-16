@@ -781,12 +781,8 @@ a:focus .absolute-portfolio-block {
     position: relative;
     margin-top: 4px;
 }
-.checkbox-text{
-    font-size: 12px;
-    font-weight: 400px;
-    line-height: 1.333;
-}
-.checkbox-text a{
+
+.label-checkbox a{
     color: var(--iris);
 }
 .label-form:nth-child(2) .icon-modal{
@@ -827,6 +823,9 @@ height: 12px;
     margin-bottom: 24px;
     cursor: pointer;
     position: relative;
+    font-size: 12px;
+    font-weight: 400px;
+    line-height: 1.333;
 }
 .checkbox{
     width: 16px;
